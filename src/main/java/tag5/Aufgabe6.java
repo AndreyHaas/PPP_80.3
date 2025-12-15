@@ -48,18 +48,13 @@ public class Aufgabe6 {
         System.out.println("Geben sie bitte operator ein: ");
         operator = scanner.nextLine();
 
-        int[] zahlen = {10, 20, 30, 40, 50};
-        for (int i = 5; i >= zahlen.length; i--) {
-            System.out.println();
-        }
-
         try {
             if (operator.equals("+")) {
                 ergebnis = ersteZahl + zweiteZahl;
             } else if (operator.equals("-")) {
                 ergebnis = ersteZahl - zweiteZahl;
             } else if (operator.equals("/")) {
-                ergebnis = ersteZahl / zweiteZahl;
+                ergebnis = (float) ersteZahl / zweiteZahl;
             } else if (operator.equals("*")) {
                 ergebnis = ersteZahl * zweiteZahl;
             } else {
