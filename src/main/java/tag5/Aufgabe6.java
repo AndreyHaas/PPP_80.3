@@ -49,7 +49,7 @@ public class Aufgabe6 {
         operator = scanner.nextLine();
 
         int[] zahlen = {10, 20, 30, 40, 50};
-        for (int i = 5; i > zahlen.length; i--) {
+        for (int i = 5; i >= zahlen.length; i--) {
             System.out.println();
         }
 
