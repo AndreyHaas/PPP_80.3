@@ -37,6 +37,7 @@
 .idea/compiler.xml
 .idea/externalDependencies.xml
 .idea/misc.xml
+.idea/vcs.xml
 # .idea/modules.xml
 .idea/*.iml
 # .idea/modules
