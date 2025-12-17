@@ -27,7 +27,7 @@ import java.util.Scanner;
 
 public class Aufgabe5 {
 
-    public static final String RECHNEN_STRING = "Rechen sie %d %s %d %n";
+    public static final String RECHNEN_STRING = "%d %s %d = ";
 
     public static void main(String[] args) {
         Random generator = new Random();
@@ -65,18 +65,17 @@ public class Aufgabe5 {
                 }
                 result = ersteZahl / zweiteZal;
                 System.out.printf(RECHNEN_STRING, ersteZahl, generierteOperation, zweiteZal);
-
-                if (result == userEingabe.nextInt()) {
-                    korrektAntwort++;
-                    System.out.println("Prima");
-                } else {
-                    System.out.println("Leider falsch. Richtige Antwort war: " + result);
-                }
             }
 
-            System.out.println("Anzahl der korrekt bearbeiteten Aufgaben: " + korrektAntwort);
-            double percentLoesungen = (double) korrektAntwort / aufgabenZahl * 100;
-            System.out.printf("Aufgaben sind richtig gerechnet auf %.2f%% %n", percentLoesungen);
+            if (result == userEingabe.nextInt()) {
+                korrektAntwort++;
+                System.out.println("Prima");
+            } else {
+                System.out.println("Leider falsch. Richtige Antwort war: " + result);
+            }
         }
+
+        System.out.println("Anzahl der richtigen Antworten: " + korrektAntwort);
+        System.out.printf("Sie haben %.2f%% der Fragen richtig beantwortet.%n", (double) korrektAntwort / aufgabenZahl * 100);
     }
 }
