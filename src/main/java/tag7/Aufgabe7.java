@@ -22,8 +22,8 @@ public class Aufgabe7 {
     }
 
     static class Buch {
-        String titel;
-        String autor;
+        private String titel;
+        private String autor;
 
         public Buch() {
         }
@@ -37,8 +37,16 @@ public class Aufgabe7 {
             return titel;
         }
 
+        public void setTitel(String titel) {
+            this.titel = titel;
+        }
+
         public String getAutor() {
             return autor;
+        }
+
+        public void setAutor(String autor) {
+            this.autor = autor;
         }
 
         void zeigeDetails(@NotNull Buch buch) {
