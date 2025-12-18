@@ -1,4 +1,4 @@
-package tag03.hausaufgabe;
+package tag3.hausaufgabe;
 
 public class Hausaufgabe2 {
     public static void main(String[] args) {

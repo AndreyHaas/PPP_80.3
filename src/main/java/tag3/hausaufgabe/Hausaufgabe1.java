@@ -1,4 +1,4 @@
-package tag03.hausaufgabe;
+package tag3.hausaufgabe;
 
 import java.util.Random;
 
