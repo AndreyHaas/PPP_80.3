@@ -13,13 +13,13 @@ Zur Verfügung stehen:
 
 Nach jeder Aufgabe erhält der User eine Information.
 Hat er richtig gerechnet, reicht ein "Prima" oder so :-)
-Hat er falsch gerechnet, wird ein "Leider falsch" zusammen mit der richtigen Lösung ausgegeben.
+hat er falsch gerechnet, wird ein "Leider falsch" zusammen mit der richtigen Lösung ausgegeben.
 
 Hat der User alle 5 Aufgaben bearbeitet, wird die Anzahl der korrekt bearbeiteten Aufgaben
 ausgegeben.
 
-Ergänzung: (für Runaways) Der Computer fragt am Anfang, wie viele Rechenaufgaben gestellt werden sollen und passt die Schleife entsprechend an
- 			              Am Ende berechnet der Computer, wieviel % der Aufgaben richtig gerechnet wurden
+Ergänzung: (für Runaways) der Computer fragt am Anfang, wie viele Rechenaufgaben gestellt werden sollen und passt die Schleife entsprechend an
+ 			              am Ende berechnet der Computer, wie viel % der Aufgaben richtig gerechnet wurden
  */
 
 import java.util.Random;
@@ -33,8 +33,8 @@ public class Aufgabe5 {
         Random generator = new Random();
         Scanner userEingabe = new Scanner(System.in);
         int korrektAntwort = 0;
-        int result = 0;
-        System.out.println("Wie fiel Aufgaben willst du rechnen? ");
+        int result;
+        System.out.println("Wie viel Aufgaben willst du rechnen? ");
         int aufgabenZahl = userEingabe.nextInt();
 
         for (int i = 0; i < aufgabenZahl; i++) {
@@ -46,16 +46,12 @@ public class Aufgabe5 {
 
             if (generierteOperation == '+') {
                 result = ersteZahl + zweiteZal;
-                System.out.printf(RECHNEN_STRING, ersteZahl, generierteOperation, zweiteZal);
             } else if (generierteOperation == '-') {
                 result = ersteZahl - zweiteZal;
-                System.out.printf(RECHNEN_STRING, ersteZahl, generierteOperation, zweiteZal);
             } else if (generierteOperation == '*') {
                 result = ersteZahl * zweiteZal;
-                System.out.printf(RECHNEN_STRING, ersteZahl, generierteOperation, zweiteZal);
             } else if (generierteOperation == '%') {
                 result = ersteZahl % zweiteZal;
-                System.out.printf(RECHNEN_STRING, ersteZahl, generierteOperation, zweiteZal);
             } else {
                 if (ersteZahl % zweiteZal != 0) {
                     do {
@@ -64,8 +60,8 @@ public class Aufgabe5 {
                     } while (ersteZahl % zweiteZal != 0);
                 }
                 result = ersteZahl / zweiteZal;
-                System.out.printf(RECHNEN_STRING, ersteZahl, generierteOperation, zweiteZal);
             }
+            System.out.printf(RECHNEN_STRING, ersteZahl, generierteOperation, zweiteZal);
 
             if (result == userEingabe.nextInt()) {
                 korrektAntwort++;
