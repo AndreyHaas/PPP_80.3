@@ -4,7 +4,7 @@ package tag9;
 Aufgabe 4:
 ==========
 Auf einem Bauernhof leben 5 Ziegen, 3 Kühe und 10 Hühner
-Eine Ziege verbraucht 5 Ziegenfutter pro Tag.
+eine Ziege verbraucht 5 Ziegenfutter pro Tag.
 Eine Kuh verbraucht 10 Kuhfutter pro Tag.
 Ein Huhn verbraucht 2 Hühnerfutter pro Tag.
 
@@ -15,7 +15,7 @@ einTagVerstreicht()
 kontrolliereVorrat()
 fuelleVorratAuf()
 
-In einer Schleife, die 50 mal läuft, werden folgende Methoden aufgerufen.
+In einer Schleife, die 50-mal läuft, werden folgende Methoden aufgerufen.
 einTagVerstreicht() --> Die Tiere verbrauchen Futter
 kontrolliereVorrat() --> Der Futterbestand wird geprüft
 Sollte der Vorrat für ein Tier auf 0 oder kleiner 0 sinken, ruft kontrolliereVorrat()
@@ -41,14 +41,12 @@ public class Aufgabe4 {
     private static final int AUFFUELLUNG = 50;
     private static final int DAUER = 50;
 
-
     public static void main(String[] args) {
-
 
         for (int i = 1; i <= DAUER; i++) {
             einTagVerstreicht(i);
         }
-        System.out.printf("Auf Lager geblieben: ziegenFutter = %d, kuhFutter = %d, huehnerFutter = %d%n",
+        System.out.printf("Auf Lager geblieben: ziegenFutter = %d, kuhFutter = %d, hühnerFutter = %d%n",
                 ziegenFutter, kuhFutter, huehnerFutter);
     }
 
@@ -70,25 +68,24 @@ public class Aufgabe4 {
     }
 
     private static void fuelleVorratAuf(String tier) {
+        String string = "Aufgefüllt auf ";
         if (tier.equals("Ziege")) {
             ziegenFutter += AUFFUELLUNG;
-            System.out.println("Aufgefüllt auf " + ziegenFutter);
+            System.out.println(string + ziegenFutter);
         } else if (tier.equals("Kuh")) {
             kuhFutter += AUFFUELLUNG;
-            System.out.println("Aufgefüllt auf " + kuhFutter);
+            System.out.println(string + kuhFutter);
         } else {
             huehnerFutter += AUFFUELLUNG;
-            System.out.println("Aufgefüllt auf " + huehnerFutter);
+            System.out.println(string + huehnerFutter);
         }
     }
 
     private static void einTagVerstreicht(int tag) {
         System.out.println("Tag: " + tag);
-
         ziegenFutter -= ANZAHL_ZIEGEN * VERBRAUCH_ZIEGE;
         kuhFutter -= ANZAHL_KUEHE * VERBRAUCH_KUH;
         huehnerFutter -= ANZAHL_HUEHNER * VERBRAUCH_HUHN;
-
         kontrolliereVorrat();
     }
 }
