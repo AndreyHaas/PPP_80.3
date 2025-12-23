@@ -10,32 +10,32 @@ package tag11;
  */
 
 public class Song {
-    private String titel;
-    private int dauerSekunden;
+    private String title;
+    private int dauerSek;
     private String interpret;
 
-    public Song(){};
+    public Song(){}
 
-    public Song(String titel, int dauerSekunden, String interpret) {
-        this.titel = titel;
-        this.dauerSekunden = dauerSekunden;
+    public Song(String title, int dauerSekunden, String interpret) {
+        this.title = title;
+        this.dauerSek = dauerSekunden;
         this.interpret = interpret;
     }
 
-    public String getTitel() {
-        return titel;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTitel(String titel) {
-        this.titel = titel;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public int getDauerSekunden() {
-        return dauerSekunden;
+    public int getDauerSek() {
+        return dauerSek;
     }
 
-    public void setDauerSekunden(int dauerSekunden) {
-        this.dauerSekunden = dauerSekunden;
+    public void setDauerSek(int dauerSek) {
+        this.dauerSek = dauerSek;
     }
 
     public String getInterpret() {
@@ -50,23 +50,23 @@ public class Song {
     public final boolean equals(Object o) {
         if (!(o instanceof Song that)) return false;
 
-        return dauerSekunden == that.dauerSekunden && titel.equals(that.titel) && interpret.equals(that.interpret);
+        return dauerSek == that.dauerSek && title.equals(that.title) && interpret.equals(that.interpret);
     }
 
     @Override
     public int hashCode() {
-        int result = titel.hashCode();
-        result = 31 * result + dauerSekunden;
+        int result = title.hashCode();
+        result = 31 * result + dauerSek;
         result = 31 * result + interpret.hashCode();
         return result;
     }
 
     public void spielen() {
         System.out.println(
-                "Song: " + getTitel() + ", Interpret: " + getInterpret() + ", dauer: " + umwandlung(getDauerSekunden()));
+                "Song: " + getTitle() + ", Interpret: " + getInterpret() + ", dauer: " + zeitConverter(getDauerSek()));
     }
 
-    private String umwandlung(int sekunden) {
-        return String.format("%02d:%02d", sekunden / 60, sekunden % 60);
+    private String zeitConverter(int sek) {
+        return String.format("%02d:%02d", sek / 60, sek % 60);
     }
 }
