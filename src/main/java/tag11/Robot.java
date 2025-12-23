@@ -1,4 +1,5 @@
 package tag11;
+
 /* Level 2
  * Sie bauen einen Roboter. Erstellen Sie die Klasse Robot mit folgenden Membern:
  *  - Integer "batterieLaufzeit"
@@ -33,29 +34,22 @@ public class Robot {
         this.aufgabe = aufgabe;
     }
 
-    @Override
-    public final boolean equals(Object o) {
-        if (!(o instanceof Robot that)) return false;
-
-        return batterieLaufzeit == that.batterieLaufzeit && aufgabe.equals(that.aufgabe);
-    }
-
-    @Override
-    public int hashCode() {
-        int result = batterieLaufzeit;
-        result = 31 * result + aufgabe.hashCode();
-        return result;
-    }
-
-    public boolean istBatterieLaufzeitNiedrig() {
+    private boolean istBatterieLaufzeitNiedrig() {
         return batterieLaufzeit < 2;
     }
 
-    public void fuehreAufgabeAus() {
-        if (!istBatterieLaufzeitNiedrig()) {
-            System.out.println(getAufgabe());
+    /**
+     * Erfüllt seine Aufgabe.
+     * Wenn der Akkuladestand unter 2 liegt, wird eine Meldung angezeigt,
+     * dass das Gerät aufgeladen werden muss.
+     */
+
+    public String fuehreAufgabeAus() {
+        if (istBatterieLaufzeitNiedrig()) {
+            return "Ich muss aufgeladen werden.";
+        } else {
             batterieLaufzeit--;
-        } else
-            System.out.println("Ich muss aufgeladen werden.");
+            return getAufgabe();
+        }
     }
 }
