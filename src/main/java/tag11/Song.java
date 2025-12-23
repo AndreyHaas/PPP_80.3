@@ -16,12 +16,6 @@ public class Song {
 
     public Song(){}
 
-    public Song(String title, int dauerSekunden, String interpret) {
-        this.title = title;
-        this.dauerSek = dauerSekunden;
-        this.interpret = interpret;
-    }
-
     public String getTitle() {
         return title;
     }
@@ -46,27 +40,14 @@ public class Song {
         this.interpret = interpret;
     }
 
-    @Override
-    public final boolean equals(Object o) {
-        if (!(o instanceof Song song)) return false;
-
-        return dauerSek == song.dauerSek && title.equals(song.title) && interpret.equals(song.interpret);
-    }
-
-    @Override
-    public int hashCode() {
-        int result = title.hashCode();
-        result = 31 * result + dauerSek;
-        result = 31 * result + interpret.hashCode();
-        return result;
-    }
-
     /**
      * Gibt info ueber Spiel
+     *
+     * @return
      */
-    public void spielen() {
-        System.out.println(
-                "Song: " + getTitle() + ", Interpret: " + getInterpret() + ", dauer: " + zeitConverter(getDauerSek()));
+    public String spielen() {
+        return
+                "Song: " + getTitle() + ", Interpret: " + getInterpret() + ", dauer: " + zeitConverter(getDauerSek());
     }
 
     private String zeitConverter(int sek) {
