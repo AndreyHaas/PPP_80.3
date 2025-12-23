@@ -48,9 +48,9 @@ public class Song {
 
     @Override
     public final boolean equals(Object o) {
-        if (!(o instanceof Song that)) return false;
+        if (!(o instanceof Song song)) return false;
 
-        return dauerSek == that.dauerSek && title.equals(that.title) && interpret.equals(that.interpret);
+        return dauerSek == song.dauerSek && title.equals(song.title) && interpret.equals(song.interpret);
     }
 
     @Override
@@ -61,12 +61,18 @@ public class Song {
         return result;
     }
 
+    /**
+     * Gibt info ueber Spiel
+     */
     public void spielen() {
         System.out.println(
                 "Song: " + getTitle() + ", Interpret: " + getInterpret() + ", dauer: " + zeitConverter(getDauerSek()));
     }
 
     private String zeitConverter(int sek) {
-        return String.format("%02d:%02d", sek / 60, sek % 60);
+
+        int minuten = sek / 60;
+        int sekunden = sek % 60;
+        return String.format("%02d:%02d", minuten, sekunden);
     }
 }
