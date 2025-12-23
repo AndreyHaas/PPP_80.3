@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 
 public class RobotTest {
     Robot robot;
+
     @Before
     public void setUp() {
         robot = new Robot();
@@ -18,6 +19,7 @@ public class RobotTest {
     @Test
     public void fuehreAufgabeAusBattUeberZwo() {
         robot.fuehreAufgabeAus();
+
         assertEquals("Aufgabe", robot.getAufgabe());
     }
 
@@ -31,7 +33,7 @@ public class RobotTest {
     }
 
     @Test
-    public void getLaufzeit() {
+    public void getLaufZeit() {
         robot = new Robot();
         robot.setBatterieLaufzeit(15);
 
