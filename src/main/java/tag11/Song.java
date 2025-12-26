@@ -39,9 +39,7 @@ public class Song {
     }
 
     /**
-     * Gibt info ueber Spiel
-     *
-     * @return
+     * Gibt info ueber das Spiel
      */
     public String spielen() {
         return
