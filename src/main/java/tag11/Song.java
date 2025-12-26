@@ -14,10 +14,6 @@ public class Song {
     private int dauerSek;
     private String interpret;
 
-    public Song(){
-        //default Konstruktor
-    }
-
     public String getTitle() {
         return title;
     }
