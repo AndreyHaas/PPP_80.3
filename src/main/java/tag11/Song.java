@@ -14,7 +14,9 @@ public class Song {
     private int dauerSek;
     private String interpret;
 
-    public Song(){}
+    public Song(){
+        //default Konstruktor
+    }
 
     public String getTitle() {
         return title;
@@ -47,7 +49,7 @@ public class Song {
      */
     public String spielen() {
         return
-                "Song: " + getTitle() + ", Interpret: " + getInterpret() + ", dauer: " + zeitConverter(getDauerSek());
+                "Song: " + getTitle() + ", Interpret: " + getInterpret() + ", Dauer: " + zeitConverter(getDauerSek());
     }
 
     private String zeitConverter(int sek) {
