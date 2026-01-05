@@ -84,11 +84,9 @@ public class Aufgabe4 {
 
     private static void einTagVerstreicht(int tag) {
         System.out.println("Tag: " + tag);
-
+        kontrolliereVorrat();
         ziegenFutter -= ANZAHL_ZIEGEN * VERBRAUCH_ZIEGE;
         kuhFutter -= ANZAHL_KUEHE * VERBRAUCH_KUH;
         huehnerFutter -= ANZAHL_HUEHNER * VERBRAUCH_HUHN;
-
-        kontrolliereVorrat();
     }
 }
