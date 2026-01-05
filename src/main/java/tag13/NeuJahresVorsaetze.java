@@ -1,4 +1,4 @@
-package tag13.revision1;
+package tag13;
 
 import java.util.Scanner;
 
@@ -27,7 +27,5 @@ public class NeuJahresVorsaetze {
         sport.showStatus();
         schlafen.showStatus();
         variabel.showStatus();
-
     }
-
 }
