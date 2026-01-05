@@ -142,23 +142,23 @@ public class GetraenkeAutomat {
         System.out.println("Bitte wählen Sie:");
         
         if (wasser > 0) {
-            System.out.println("1 - Wasser (1.00 Euro). Verfuegbar: " + wasser);
+            System.out.println("1 - Wasser (1.00 Euro). Verfügbar: " + wasser);
         }
         
         if (cola > 0) {
-            System.out.println("2 - Cola (1.50 Euro).  Verfuegbar: " + cola);
+            System.out.println("2 - Cola (1.50 Euro).  Verfügbar: " + cola);
         }
         
         if (kaffee > 0) {
-            System.out.println("3 - Kaffee (2.00 Euro). Verfuegbar: " + kaffee);
+            System.out.println("3 - Kaffee (2.00 Euro). Verfügbar: " + kaffee);
         }
         
         if (tee > 0) {
-            System.out.println("4 - Tee (1.80 Euro). Verfuegbar: " + tee);
+            System.out.println("4 - Tee (1.80 Euro). Verfügbar: " + tee);
         }
         
         if (prosecco > 0) {
-            System.out.println("5 - Prosecco (4.30 Euro). Verfuegbar: " + prosecco);
+            System.out.println("5 - Prosecco (4.30 Euro). Verfügbar: " + prosecco);
         }
         
         System.out.println("0 - Beenden");
