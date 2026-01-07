@@ -132,33 +132,33 @@ ENDE
  */
 public class GetraenkeAutomat {
 
-    static int wasser = 10;
-    static int cola = 10;
-    static int kaffee = 10;
-    static int tee = 10;
-    static int prosecco = 10;
+    static int wasserAufLager = 10;
+    static int colaAufLager = 10;
+    static int kaffeeAufLager = 10;
+    static int teeAufLager = 10;
+    static int proseccoAufLager = 10;
 
     void zeigeMenue() {
         System.out.println("Bitte wählen Sie:");
         
-        if (wasser > 0) {
-            System.out.println("1 - Wasser (1.00 Euro). Verfügbar: " + wasser);
+        if (wasserAufLager > 0) {
+            System.out.println("1 - Wasser (1.00 Euro). Verfügbar: " + wasserAufLager);
         }
         
-        if (cola > 0) {
-            System.out.println("2 - Cola (1.50 Euro).  Verfügbar: " + cola);
+        if (colaAufLager > 0) {
+            System.out.println("2 - Cola (1.50 Euro).  Verfügbar: " + colaAufLager);
         }
         
-        if (kaffee > 0) {
-            System.out.println("3 - Kaffee (2.00 Euro). Verfügbar: " + kaffee);
+        if (kaffeeAufLager > 0) {
+            System.out.println("3 - Kaffee (2.00 Euro). Verfügbar: " + kaffeeAufLager);
         }
         
-        if (tee > 0) {
-            System.out.println("4 - Tee (1.80 Euro). Verfügbar: " + tee);
+        if (teeAufLager > 0) {
+            System.out.println("4 - Tee (1.80 Euro). Verfügbar: " + teeAufLager);
         }
         
-        if (prosecco > 0) {
-            System.out.println("5 - Prosecco (4.30 Euro). Verfügbar: " + prosecco);
+        if (proseccoAufLager > 0) {
+            System.out.println("5 - Prosecco (4.30 Euro). Verfügbar: " + proseccoAufLager);
         }
         
         System.out.println("0 - Beenden");
@@ -169,31 +169,31 @@ public class GetraenkeAutomat {
                 switch (auswahl) {
                     case 1 -> {
                         System.out.println("Sie haben Wasser gewählt. Preis: 1.00 Euro");
-                        wasser--;
+                        wasserAufLager--;
                         yield 1.00;
                     }
 
                     case 2 -> {
                         System.out.println("Sie haben Cola gewählt. Preis: 1.50 Euro");
-                        cola--;
+                        colaAufLager--;
                         yield 1.5;
                     }
 
                     case 3 -> {
                         System.out.println("Sie haben Kaffee gewählt. Preis: 2.00 Euro");
-                        kaffee--;
+                        kaffeeAufLager--;
                         yield 2.0;
                     }
 
                     case 4 -> {
                         System.out.println("Sie haben Tee gewählt. Preis: 1.80 Euro");
-                        tee--;
+                        teeAufLager--;
                         yield 1.8;
                     }
 
                     case 5 -> {
                         System.out.println("Sie haben Prosecco gewählt. Preis: 4.30 Euro");
-                        prosecco--;
+                        proseccoAufLager--;
                         yield 4.30;
                     }
 
