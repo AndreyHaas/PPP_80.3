@@ -64,7 +64,7 @@ public class LottoSpiel {
     public static int[] generateLottoNumbers(Random random) {
         int[] numbers = new int[6];
 
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < numbers.length; i++) {
             int nummer;
             boolean isDuplicate;
 
@@ -98,7 +98,6 @@ public class LottoSpiel {
     public static int countMatches(int @NotNull [] arr1, int[] arr2) {
         int matches = 0;
 
-        // Optimierte Berechnung für sortierte Arrays
         int i = 0;
         int j = 0;
         while (i < arr1.length && j < arr2.length) {
@@ -123,10 +122,10 @@ public class LottoSpiel {
      */
     public static void bubbleSort(int @NotNull [] arr) {
         int n = arr.length;
+
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
-                    // Austausch von Elementen
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;

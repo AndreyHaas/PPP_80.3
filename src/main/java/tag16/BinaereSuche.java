@@ -62,10 +62,11 @@ public class BinaereSuche {
 
         System.out.printf("%nWir suchen den Wert '%d' im Array%n", suchwert);
 
-        getSuchWertPosition(array, suchwert);
+        System.out.println(getSuchWertPosition(array, 50000));
+        System.out.println(getSuchWertPosition(array, suchwert));
     }
 
-    private static void getSuchWertPosition(int @NotNull [] array, int suchWert) {
+    private static int getSuchWertPosition(int @NotNull [] array, int suchWert) {
 
         int firstPos = 0;
         int lastPos = array.length;
@@ -97,5 +98,7 @@ public class BinaereSuche {
         } else {
             System.out.println("Suchbegriff nicht gefunden\n");
         }
+
+        return suchWertPosition;
     }
 }
