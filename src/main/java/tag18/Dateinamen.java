@@ -37,6 +37,9 @@ import java.util.Scanner;
     Dateiname: Import20220228 (!)
  */
 public class Dateinamen {
+
+    public static final String UNGUELTIGER_MONAT = "Ungültiger Monat";
+
     public static void main(String[] args) {
         Scanner userEingabe = new Scanner(System.in);
 
@@ -60,7 +63,7 @@ public class Dateinamen {
 
     private static String getValidResultString(int jahr, int monat, int tag) {
         if (monat < 0 || monat > 12) {
-            throw new IllegalArgumentException("Ungültiger Monat");
+            throw new IllegalArgumentException(UNGUELTIGER_MONAT);
         }
 
         if (monat == 0) {
@@ -91,7 +94,7 @@ public class Dateinamen {
             case 1, 3, 5, 7, 8, 10, 12 -> 31;
             case 4, 6, 9, 11 -> 30;
             case 2 -> istSchaltJahr(jahr) ? 29 : 28;
-            default -> throw new IllegalArgumentException("Ungültiger Monat");
+            default -> throw new IllegalArgumentException(UNGUELTIGER_MONAT);
         };
     }
 }
