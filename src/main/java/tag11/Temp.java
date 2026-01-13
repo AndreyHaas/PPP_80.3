@@ -1,5 +1,4 @@
-import tag11.Robot;
-import tag11.Song;
+package tag11;
 
 public class Temp {
     public static void main(String[] args) {

@@ -1,0 +1,1 @@
+vererbung und interfaces
