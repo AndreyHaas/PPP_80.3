@@ -85,8 +85,8 @@ public class Dateinamen {
                 + String.format("%02d", tag);
     }
 
-    static boolean istSchaltJahr(int year) {
-        return year % 400 == 0 || year % 4 == 0 && year % 100 != 0;
+    static boolean istSchaltJahr(int jahr) {
+        return jahr % 400 == 0 || jahr % 4 == 0 && jahr % 100 != 0;
     }
 
     static int getMaxTagInMonat(int jahr, int monat) {
