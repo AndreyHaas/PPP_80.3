@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>tag19.ha.a2</OriginalElement>
+  <nodes>
+    <node x="-32.76926429496976" y="161.55978700678648">tag19.ha.a2.Terminator</node>
+    <node x="337.79292302354213" y="161.55978700678648">tag19.ha.a2.Transformer</node>
+    <node x="163.51182936428617" y="161.55978700678648">tag19.ha.a2.Android</node>
+    <node x="166.51182936428623" y="-14.85928708968892">tag19.ha.a2.Robot</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="tag19.ha.a2.Terminator" target="tag19.ha.a2.Robot" relationship="GENERALIZATION">
+      <point x="5.935930961636416" y="-40.39312034011979" />
+      <point x="59.66666666666666" y="52.30766666666665" />
+      <point x="152.33333333333334" y="52.30766666666665" />
+      <point x="152.33333333333334" y="52.307666666666655" />
+      <point x="245.8545" y="52.307666666666655" />
+      <point x="245.8545" y="45.641" />
+      <point x="-73.9995553293248" y="2.8708968891955067E-4" />
+    </edge>
+    <edge source="tag19.ha.a2.Transformer" target="tag19.ha.a2.Robot" relationship="GENERALIZATION">
+      <point x="3.5804754139073225" y="-38.34489972413172" />
+      <point x="414.87339843744945" y="48.33333333333334" />
+      <point x="73.6247780040085" y="2.6926204230222623" />
+    </edge>
+    <edge source="tag19.ha.a2.Android" target="tag19.ha.a2.Robot" relationship="GENERALIZATION">
+      <point x="0.6548373023804572" y="-39.05978700678648" />
+      <point x="239.01182936428617" y="161.0" />
+      <point x="239.01182936428617" y="105.66666666666669" />
+      <point x="-3.7085553293248097" y="60.025953756355605" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.5" showDependencies="false" x="242.0" y="125.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
