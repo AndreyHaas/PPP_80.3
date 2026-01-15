@@ -1,4 +1,4 @@
-package markus;
+package tag02;
 
 public class Mensch {
     private String hautColor;
